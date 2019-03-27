@@ -1,7 +1,7 @@
 %define sselp_ver 0.2
 
 Name:           dmenu
-Version:        4.6
+Version:        4.9
 Release:        1
 Summary:        A dynamic menu for X
 License:        MIT License
