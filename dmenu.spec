@@ -31,7 +31,7 @@ Prints X selection to standard out.
 %setup -q -a1
 # Insert optflags + ldflags
 sed -i -e 's|-Os|%{optflags}|' config.mk
-sed -i -e 's|$(LIBS)|%{build__ldflags} $(LIBS)|' config.mk
+sed -i -e 's|$(LIBS)|%{build_ldflags} $(LIBS)|' config.mk
 # X includedir path fix
 sed -i -e 's|X11INC = .*|X11INC = %{_includedir}|' config.mk
 # libdir path fix
