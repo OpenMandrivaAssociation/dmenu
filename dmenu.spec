@@ -27,7 +27,7 @@ Summary:	Prints X selection to standard out
 Prints X selection to standard out.
 
 %prep
-%setup -q -a1
+%autosetup -p1 -a1
 
 %build
 %set_build_flags
@@ -37,6 +37,7 @@ Prints X selection to standard out.
     X11LIB="%{_libdir}"
 
 cd sselp-%{sselp_ver}
+sed -i -e 's,-L/usr/lib,-L%{_libdir},g' -e 's,-L/usr/X11R6/lib,,g' config.mk
 %make_build CC="%{__cc} %{optflags} %{build_ldflags}"
 cd ..
 
