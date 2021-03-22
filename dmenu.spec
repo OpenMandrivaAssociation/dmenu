@@ -9,11 +9,10 @@ Group:		Graphical desktop/Other
 URL:		http://tools.suckless.org/dmenu/
 Source0:	http://dl.suckless.org/tools/%{name}-%{version}.tar.gz
 Source1:	http://dl.suckless.org/tools/sselp-%{sselp_ver}.tar.gz
+Patch0:		dmenu-optflags.patch
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xinerama)
 BuildRequires:	pkgconfig(xft)
-Requires:	terminus-font
-Requires:	sselp
 %rename		dwm-tools
 
 %description
@@ -29,24 +28,17 @@ Prints X selection to standard out.
 
 %prep
 %setup -q -a1
-# Insert optflags + ldflags
-sed -i -e 's|-Os|%{optflags}|' config.mk
-sed -i -e 's|$(LIBS)|%{build_ldflags} $(LIBS)|' config.mk
-# X includedir path fix
-sed -i -e 's|X11INC = .*|X11INC = %{_includedir}|' config.mk
-# libdir path fix
-sed -i -e 's|X11LIB = .*|X11LIB = %{_libdir}|' config.mk
 
 %build
 %set_build_flags
 
 %make_build CC="%{__cc} %{optflags} %{build_ldflags}" \
-    X11INC=%{_includedir} \
-    X11LIB=%{_libdir}
+    X11INC="%{_includedir}" \
+    X11LIB="%{_libdir}"
 
-pushd sselp-%{sselp_ver}
+cd sselp-%{sselp_ver}
 %make_build CC="%{__cc} %{optflags} %{build_ldflags}"
-popd
+cd ..
 
 %install
 %make_install DESTDIR=%{buildroot} PREFIX=%{_prefix} MANPREFIX=%{_mandir}
