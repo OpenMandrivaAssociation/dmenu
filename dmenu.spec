@@ -20,7 +20,7 @@ dmenu is a dynamic menu for X, originally designed for dwm. It manages large
 numbers of user-defined menu items efficiently.
 
 %package -n sselp
-Version:	0.2
+Version:	5.0
 Summary:	Prints X selection to standard out
 
 %description -n sselp
