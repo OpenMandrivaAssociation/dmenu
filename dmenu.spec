@@ -2,7 +2,7 @@
 
 Summary:	A dynamic menu for X
 Name:		dmenu
-Version:	5.1
+Version:	5.2
 Release:	1
 License:	MIT License
 Group:		Graphical desktop/Other
@@ -20,7 +20,7 @@ dmenu is a dynamic menu for X, originally designed for dwm. It manages large
 numbers of user-defined menu items efficiently.
 
 %package -n sselp
-Version:	5.1
+Version:	5.2
 Summary:	Prints X selection to standard out
 
 %description -n sselp
