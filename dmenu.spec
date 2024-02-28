@@ -3,7 +3,7 @@
 Summary:	A dynamic menu for X
 Name:		dmenu
 Version:	5.2
-Release:	1
+Release:	2
 License:	MIT License
 Group:		Graphical desktop/Other
 URL:		http://tools.suckless.org/dmenu/
