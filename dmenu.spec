@@ -2,8 +2,8 @@
 
 Summary:	A dynamic menu for X
 Name:		dmenu
-Version:	5.2
-Release:	2
+Version:	5.3
+Release:	1
 License:	MIT License
 Group:		Graphical desktop/Other
 URL:		http://tools.suckless.org/dmenu/
@@ -20,7 +20,7 @@ dmenu is a dynamic menu for X, originally designed for dwm. It manages large
 numbers of user-defined menu items efficiently.
 
 %package -n sselp
-Version:	5.2
+Version:	5.3
 Summary:	Prints X selection to standard out
 
 %description -n sselp
