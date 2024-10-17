@@ -6,7 +6,7 @@ Version:	5.3
 Release:	1
 License:	MIT License
 Group:		Graphical desktop/Other
-URL:		http://tools.suckless.org/dmenu/
+URL:		https://tools.suckless.org/dmenu/
 Source0:	http://dl.suckless.org/tools/%{name}-%{version}.tar.gz
 Source1:	http://dl.suckless.org/tools/sselp-%{sselp_ver}.tar.gz
 Patch0:		dmenu-optflags.patch
